@@ -25,7 +25,6 @@ class Generate extends React.Component {
         console.log("wasmFile", this.wasmFile);
         console.log("circuitKey", this.circuitKey);
         console.log("input", this.state.input);
-        console.log("Call=", this.snarkjs);
         const { proof, publicSignals } = await this.snarkjs.groth16.fullProve(this.input, this.wasmFile, this.circuitKey);
         console.log("proof", proof );
         console.log("signals", publicSignals);
